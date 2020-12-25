@@ -12,7 +12,7 @@ Tested on:
 ### How to install
 Clone this repository and copy the EFI folder inside your EFI partition. You will need to use [GenSMBIOS](https://github.com/corpnewt/GenSMBIOS) to generate serial and UUID. I recommend using iMac15,1 as SMBIOS.
 
-### What works
+### What does work
 - Power Management
 - Audio
 - Sleep
@@ -26,12 +26,12 @@ Clone this repository and copy the EFI folder inside your EFI partition. You wil
 ### What does not work
 - Boot Chime
 
-### Not tested yet
-- Hibernation
+## Working on
+- **Hibernation** To enable hibernation, ``hibernatemode`` [must be set](https://www.lifewire.com/change-mac-sleep-settings-2260804) to 3 in ``pmset`` (25 will disable sleep, hibernating the computer every time). To do so, simply type ``sudo pmset -a hibernatemode 3`` in the console. However, the computer never wakes from sleep to hibernate. The reason could be because RTC S4-wakes [are blocked from ACPI](https://github.com/oscarsanchezdm/hackintoshH81M-K/blob/main/EFI/OC/ACPI/SSDT-GPRW.aml).
 
 ### BIOS Configuration
-- Enable MultiMonitor support.
-- SATA in AHCI mode.
+- Enable MultiMonitor support
+- SATA in AHCI mode
 - Disable CFG lock
 
 ### Credits
