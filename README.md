@@ -20,15 +20,14 @@ Clone this repository and copy the EFI folder inside your EFI partition. You wil
 - GPU
 - IGPU (you should enable it under BIOS)
 - DRM support
-- SideCar (there may be some glitches)
+- SideCar (there may be some glitches). Only in macOS Catalina at this moment (SidecarEnabler won't work in Big Sur. However, you could use another SMBIOS).
 - OpenCanopy (press alt KEY to enter the menu)
 
 ### What does not work
 - Boot Chime
 
-## Working on
-- **Hibernation** To enable hibernation, ``hibernatemode`` [must be set](https://www.lifewire.com/change-mac-sleep-settings-2260804) to 3 in ``pmset`` (25 will disable sleep, hibernating the computer every time). To do so, simply type ``sudo pmset -a hibernatemode 3`` in the console. However, the computer never wakes from sleep to hibernate. The reason could be because RTC S4-wakes [are blocked from ACPI](https://github.com/oscarsanchezdm/hackintoshH81M-K/blob/main/EFI/OC/ACPI/SSDT-GPRW.aml).
-
+### Hibernation
+- **Hibernation** To enable hibernation, ``hibernatemode`` [must be set](https://www.lifewire.com/change-mac-sleep-settings-2260804) to 3 in ``pmset`` (25 will disable sleep, hibernating the computer every time). To do so, simply type ``sudo pmset -a hibernatemode 3`` in the console.
 ### BIOS Configuration
 - Enable MultiMonitor support
 - SATA in AHCI mode
